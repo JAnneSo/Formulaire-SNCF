@@ -1,0 +1,356 @@
+@charset "UTF-8";
+/*************** Variables ***************/
+.container {
+  width: 100%;
+  margin: 0;
+}
+
+.container__body {
+  width: 100vw;
+  min-width: 300px;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #4D4E4F;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body a {
+  text-decoration: none;
+  color: #C7155D;
+}
+
+body i {
+  color: #C7155D;
+  font-size: 24px;
+}
+
+body .material-icons {
+  vertical-align: sub;
+  font-size: 20px;
+}
+
+header {
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+header div span {
+  color: #A09D9D;
+}
+
+header h1 {
+  margin-top: 0px;
+  font-weight: lighter;
+  font-size: 3.5em;
+}
+
+header .print-share i {
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+header .logo {
+  height: 80px;
+  margin-top: 30px;
+}
+
+section .espace_dedie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #F0F0F0;
+  padding: 20px 40px;
+}
+
+section .espace_dedie span .fa-wheelchair {
+  color: black;
+  margin-right: 5px;
+}
+
+section form {
+  padding: 0px 40px;
+}
+
+section form .champ_obligatoires {
+  font-style: italic;
+  font-size: 0.8em;
+  padding: 10px 0px;
+  margin: 10px 0px;
+}
+
+section form fieldset {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+section form fieldset input {
+  padding: 10px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #A09D9D;
+}
+
+section form fieldset select, section form fieldset input[type=time] {
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+section form fieldset input[type=checkbox] {
+  margin: 0px 10px 0px 0px;
+}
+
+section form .form__allerRetour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+section form .trajet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0px;
+}
+
+section form .trajet__sub {
+  width: 48%;
+}
+
+section form .trajet__sub input[type=text] {
+  width: 100%;
+}
+
+section form .trajet__sub input[type=date] {
+  width: 40%;
+  margin-right: 20px;
+}
+
+section form .trajet__sub label {
+  display: block;
+  padding: 10px 0px;
+}
+
+section form .trajet__sub__via {
+  margin: 40px 0px;
+}
+
+section form .trajet__sub_dateheure {
+  margin-top: 10px;
+}
+
+section form .trajet__direct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px 0px;
+  position: relative;
+}
+
+section form .trajet__direct .float_right {
+  position: absolute;
+  right: 0px;
+}
+
+section form .confort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+  margin: 10px 0px;
+  border-top: 1px solid #A09D9D;
+  border-bottom: 1px solid #A09D9D;
+}
+
+section form .confort div {
+  margin: 0px 10px 0px 0px;
+}
+
+section form .confort input[type=radio] {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+section form .passager {
+  border-bottom: 1px solid #A09D9D;
+  padding-bottom: 40px;
+}
+
+section form .passager__title {
+  margin: 30px 0px 20px 0px;
+}
+
+section form .passager__title label {
+  margin-right: 30px;
+}
+
+section form .passager__title #nbpassager {
+  width: 70px;
+}
+
+section form .passager__title .float_right {
+  float: right;
+}
+
+section form .passager_infos {
+  padding: 30px 30px 40px 30px;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+}
+
+section form .passager_infos_title {
+  color: #C7155D;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #A09D9D;
+  margin-bottom: 20px;
+}
+
+section form .passager_infos_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0px 30px 0px;
+}
+
+section form .passager_infos_details .passager_infos__sub {
+  width: 48%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  -ms-grid-rows: 33% 33% 33%;
+      grid-template-rows: 33% 33% 33%;
+  grid-row-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section form .passager_infos_details .passager_infos__sub label[for="code_avantage"] {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  text-align: center;
+}
+
+section form .passager_infos_details .passager_infos__sub select {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+section form .passager_infos_details .passager_infos__sub .code_avantage {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  border: 1px solid #A09D9D;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+section form .passager_infos_details .passager_infos__sub .code_avantage #code_avantage {
+  border: none;
+  width: 100%;
+  padding-right: 30px;
+}
+
+section form .passager_infos_details .passager_infos__sub .code_avantage i {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  color: #A09D9D;
+  font-size: 20px;
+}
+
+section form .animal {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+section form .animal a {
+  color: #4D4E4F;
+}
+
+section form .soumission {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section form .soumission_horaires {
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 20px;
+  color: #C7155D;
+  border: 1px solid #F0F0F0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), to(#F0F0F0));
+  background: linear-gradient(#FCFCFC, #F0F0F0);
+}
+
+section form .soumission_rechercher {
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+  border: 1px solid #9B134A;
+  background: -webkit-gradient(linear, left top, left bottom, from(#C7155D), to(#9B134A));
+  background: linear-gradient(#C7155D, #9B134A);
+}
+
+.footer {
+  height: 80px;
+}
+
+.footer span {
+  float: right;
+  padding: 30px;
+}
+
+/*  777 média*/
+/*# sourceMappingURL=formulaire.css.map */

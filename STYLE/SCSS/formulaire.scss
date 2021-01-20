@@ -1,0 +1,287 @@
+/*************** Variables ***************/
+//$grey : #EBEAEA;
+$grey:#F0F0F0;
+$fushia : #C7155D;
+$darkfushia:#9B134A;
+$darkgrey : #A09D9D;
+$text_grey: #4D4E4F;
+
+@mixin display {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.container {
+    width: 100%;
+    margin: 0;
+  
+  
+  &__body {
+    width: 100vw;
+    min-width: 300px;
+    margin: 0;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $text_grey;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    a{
+        text-decoration: none;
+        color: $fushia;
+    }
+    i{
+        color: $fushia;
+        font-size: 24px;
+    }
+    .material-icons{
+        vertical-align: sub;
+        font-size: 20px;
+    }
+}
+
+header{
+    padding: 30px;
+    margin-bottom: 20px;
+    div{
+        @include display();
+        margin-bottom: 20px;
+        span{
+            color: $darkgrey;
+        }
+    }
+    h1{
+        margin-top: 0px;
+        font-weight: lighter;
+        font-size: 3.5em;
+    }
+    .print-share{
+        i{
+            margin-left: 10px;
+            font-size: 24px;
+        }
+    }
+    .logo{
+        height: 80px;
+        margin-top: 30px;
+    }
+}
+
+section{
+    .espace_dedie{
+        @include display();
+        border-top: 1px solid $grey;
+        padding: 20px 40px;
+        span{
+            
+            .fa-wheelchair{
+                color: black;
+                margin-right: 5px;
+            }
+        }
+    }
+    form{
+        padding: 0px 40px;
+
+        .champ_obligatoires{
+            font-style: italic;
+            font-size: 0.8em;
+            padding: 10px 0px;
+            margin: 10px 0px;
+        }
+        fieldset{
+            border: none;
+            padding: 0px;
+            margin: 0px;
+            input{
+                padding: 10px 10px;
+                box-sizing: border-box;
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid $darkgrey;
+            }
+            select, input[type=time]{
+                height: 30px;
+                border-radius: 5px;
+                padding: 5px 5px 5px 5px;
+            }
+            input[type=checkbox]{
+                margin: 0px 10px 0px 0px;
+            }
+        }
+
+        .form__allerRetour{
+            display: flex;
+            align-items: center;
+            background-color: $grey;
+            border-radius: 5px;
+            padding: 5px 15px;
+            
+        }
+        .trajet{
+            @include display();
+            margin: 20px 0px;
+            &__sub{
+                width: 48%;
+                input[type=text]{
+                    width: 100%;
+                }
+                input[type=date]{
+                    width: 40%;
+                    margin-right: 20px;
+                }
+                label{
+                    display: block;
+                    padding: 10px 0px;
+                }
+                &__via{
+                    margin: 40px 0px;
+                }
+                &_dateheure{
+                    margin-top: 10px;
+                }
+            }
+            &__direct{
+                display: flex;
+                align-items: center;
+                margin: 40px 0px;
+                position: relative;
+                .float_right{
+                    position: absolute;
+                    right: 0px;
+                }
+            }
+        }
+        .confort{
+            display: flex;
+            align-items: center;
+            padding: 10px 0px;
+            margin: 10px 0px;
+            border-top: 1px solid $darkgrey;
+            border-bottom: 1px solid $darkgrey;
+            div{
+                margin: 0px 10px 0px 0px;
+            }
+            input[type=radio]{
+                margin-right: 10px;
+                margin-left: 20px;
+            }
+        }
+        .passager{
+            border-bottom: 1px solid $darkgrey;
+            padding-bottom: 40px;
+            &__title{
+                margin: 30px 0px 20px 0px;
+                label{
+                    margin-right: 30px;
+                }
+                #nbpassager{
+                    width: 70px;
+                }
+                .float_right{
+                    float: right;
+                }
+            }
+            &_infos{
+                padding: 30px 30px 40px 30px;
+                background-color: $grey;
+                border-radius: 5px;
+                
+                &_title{
+                    color: $fushia;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid $darkgrey;
+                    margin-bottom: 20px;
+                }
+                &_details{
+                    @include display();
+                    margin: 10px 0px 30px 0px;
+                    .passager_infos__sub{
+                        width: 48%;
+                        // div{
+                        //     margin: 10px 0px;
+                        // }
+                        
+                        display: grid;
+                        grid-template-columns: 40% 60%;
+                        grid-template-rows: 33% 33% 33%;
+                        grid-row-gap: 20px;
+                        align-items: center;
+                        label[for="code_avantage"]{
+                            grid-row: 2;
+                            grid-column: 1;
+                            text-align: center;
+                        }
+                        select{
+                            width: fit-content;
+                        }
+                        .code_avantage{
+                            grid-row: 2;
+                            grid-column: 2;
+                            border: 1px solid $darkgrey; 
+                            background-color: white;
+                            border-radius: 5px;
+                            position: relative;
+                            #code_avantage{
+                                border: none;
+                                width: 100%;
+                                padding-right: 30px;
+                            }
+                            i{
+                                position: absolute;
+                                top: 10px;
+                                right: 8px;
+                                color: $darkgrey;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .animal{
+            margin-top: 30px;
+            margin-bottom: 60px;
+            a{
+                color: $text_grey;
+            }
+        }
+        .soumission{
+            @include display();
+            &_horaires{
+                border-radius: 5px;
+                text-align: center;
+                padding: 10px 20px;
+                color: $fushia;
+                border: 1px solid $grey;
+                background: linear-gradient(#FCFCFC, $grey);;
+            }
+            &_rechercher{
+                border-radius: 5px;
+                text-align: center;
+                padding: 10px 20px;
+                color: white;
+                border: 1px solid $darkfushia;
+                background: linear-gradient($fushia, $darkfushia);;
+            }
+        }
+        
+    }
+}
+
+.footer{
+    height: 80px;
+    span{
+        float: right;
+        padding: 30px;
+    }
+}
+/*  777 média*/

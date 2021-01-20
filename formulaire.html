@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="STYLE/CSS/formulaire.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__body">
+            <header>
+                <div>
+                    <span>Voyageurs / Billets &amp; Info trajets /</span>
+                    <div class="print-share">
+                        <i class='fas fa-print icon_red'></i>
+                        <i class="material-icons icon_red">share</i>    
+                    </div>  
+                </div> 
+                <div>
+                    <h1>R&Eacute;SERVATION</h1>  
+                    <img class="logo" src="images/logo-voyage-sncf.svg" alt="logo-voyage-sncf">
+                </div>
+            </header>
+            <section>
+                <div class="espace_dedie">
+                    <span><i class='fas fa-wheelchair'></i> Voyageur handicapé, rendez-vous sur votre <a href="#">espace dédié</a>.</span>
+                    <span class="float_right"><a href="#">GÉRER MES RÉSERVATIONS <i class="material-icons icon_red">chevron_right</i></a></span>
+                </div>
+
+                <form action="resultatFormulaire.html">
+                    <div class="champ_obligatoires">* Champs obligatoires</div>
+                    <fieldset class="form__allerRetour">
+                        <input type="checkbox" name="ARdiff" id="ARdiff">
+                        <label for="ARdiff">Aller et retour différents</label>
+                    </fieldset>
+
+                    <fieldset class="trajet">
+                        <div class="trajet__sub">
+                                <label for="depart">Départ *</label>
+                                <input type="text" name="depart" id="depart" required>
+                            <div class="trajet__sub_dateheure">
+                                    <label for="date_depart">Aller le *</label>
+                                    <input type="date" name="date_depart" id="date_depart" required>
+                                <select name="aller_dep_arrivee" id="aller_dep_arrivee">
+                                    <option value="aller_dep">Départ à</option>
+                                    <option value="aller_arrivee">Arrivée à</option>
+                                </select>
+                                <input type="time" name="heure_depart" id="heure_depart">
+                            </div>
+                            <div class="trajet__direct">
+                                <input type="checkbox" name="trajet_direct" id="trajet_direct">
+                                <label for="trajet_direct">Trajet direct</label>
+                                <div class="float_right">Ou trajet via</div>
+                            </div>
+                        </div>
+                        <div class="trajet__sub">
+                                <label for="arrivee">Arrivée *</label>
+                                <input type="text" name="arrivee" id="arrivee" required>
+                            <div class="trajet__sub_dateheure">
+                                    <label for="date_retour">Retour le</label>
+                                    <input type="date" name="date_retour" id="date_retour">
+                                <select name="retour_dep_arrivee" id="retour_dep_arrivee">
+                                    <option value="retour_dep">Départ à</option>
+                                    <option value="retour_arrivee">Arrivée à</option>
+                                </select>
+                                <input type="time" name="heure_retour" id="heure_retour">
+                            </div>
+                            <input type="text" class="trajet__sub__via">
+                        </div>
+                    </fieldset>
+                    <fieldset class="confort">
+                        <div>CONFORT</div>
+                        <input type="radio" id="classe1" name="confort" value="classe1">
+                        <label for="classe1">1ère classe</label>
+                        <input type="radio" id="classe2" name="confort" value="classe2">
+                        <label for="classe2">2nde classe</label>
+                    </fieldset>
+                    <fieldset class="passager">
+                        <div class="passager__title">
+                            <label for="nbpassager">PASSAGERS</label>
+                            <select name="nbpassager" id="nbpassager">
+                                <option value="un">1</option>
+                                <option value="deux">2</option>
+                                <option value="trois">3</option>
+                                <option value="quatre">4</option>
+                                <option value="cinq">5</option>
+                                <option value="six">6</option>
+                                <option value="sept">7</option>
+                                <option value="huit">8</option>
+                                <option value="neuf">9</option>
+                            </select>
+                            <span class="float_right"><a href="#">PLUS DE 9 PASSAGERS <i class="material-icons icon_red">chevron_right</i></a></span>
+                        </div>
+                        <div class="passager_infos">
+                            <div class="passager_infos_title">PASSAGER 1</div>
+                            <div class="passager_infos_details">
+                                <div class="passager_infos__sub passager_infos__sub_g">
+                                        <label for="profil_passager">Profil du passager</label>
+                                        <select name="profil_passager" id="profil_passager">
+                                            <option value="adulte">26-59 ans</option>
+                                            <option value="senior">60 et +</option>
+                                            <option value="jeune">12-25 ans</option>
+                                            <option value="enfant">4-11 ans</option>
+                                            <option value="bebe">0-3 ans</option>
+                                        </select>
+                                        <label for="abonnement">Carte et abonnement</label>
+                                        <select name="abonnement" id="abonnement">
+                                            <option value="">Carte et Abonnement</option>
+                                            <option value="carte_jeune">Carte avantage jeune</option>
+                                            <option value="carte_weekend">Carte avantage week-end</option>
+                                            <option value="carte_famille">Carte avantage famille</option>
+                                            <option value="carte_liberte">Carte liberté</option>
+                                            <option value="autre">Autre</option>
+                                        </select>
+                                        <label for="fidelite">Programme fidélité</label>
+                                        <select name="fidelite" id="fidelite">
+                                            <option value="">Programme de fidélité</option>
+                                            <option value="voyageur">Voyageur</option>
+                                            <option value="grand_voyageur">Grand Voyageur</option>
+                                            <option value="grand_voyageur_plus">Grand Voyageur Plus</option>
+                                            <option value="grand_voyageur_club">Grand Voyageur Le Club</option>
+                                            <option value="my_thalys_world">My Thalys World</option>
+                                            <option value="club_eurostar">Club Eurostar</option>
+                                            <option value="autre">Autre carte SNCF</option>
+                                        </select>
+                                </div>
+                                <div  class="passager_infos__sub passager_infos__sub_d">
+                                    <label for="code_avantage">Code avantage</label>
+                                    <div class="code_avantage">
+                                        <input type="text" name="code_avantage" id="code_avantage" placeholder="Saisissez ici votre code">
+                                        <i class="fa fa-exclamation-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="animal">
+                        <a class="link_not_red" href="#"><i class="material-icons icon_red">chevron_right</i> Voyager avec votre animal de compagnie</a>
+                    </fieldset>
+                    <fieldset class="soumission">
+                        <button class="soumission_horaires">HORAIRES SEULS</button>
+                        <button class="soumission_rechercher" type="submit">RECHERCHER</button>
+                    </fieldset>
+                </form>
+            </section>
+                <div class="footer">
+                    <span>
+                    <a href="#">INFORMATION SUR LES EMISSIONS DE CO2 <i class="material-icons icon_red">chevron_right</i></a>
+                </span>
+                </div>
+        </div>
+    </div>
+    <div class="container--hitbox"></div>
+
+    <script src="formulaire.js"></script>
+</body>
+
+</html>
