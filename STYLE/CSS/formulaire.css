@@ -17,7 +17,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #4D4E4F;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body a {
@@ -33,6 +33,13 @@ body i {
 body .material-icons {
   vertical-align: sub;
   font-size: 20px;
+}
+
+body h3 {
+  margin: 0px 10px 0px 0px;
+  font-size: 1em;
+  font-weight: 400;
+  font-style: normal;
 }
 
 header {
@@ -197,10 +204,6 @@ section form .confort {
   margin: 10px 0px;
   border-top: 1px solid #A09D9D;
   border-bottom: 1px solid #A09D9D;
-}
-
-section form .confort div {
-  margin: 0px 10px 0px 0px;
 }
 
 section form .confort input[type=radio] {

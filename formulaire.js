@@ -23,10 +23,11 @@ class SmoothScroll {
       }
   
       // Launch init functions
-      document.addEventListener('DOMContentLoaded', () => { 
+      document.addEventListener('DOMContentLoaded', (event) => { 
         console.log("DOM entièrement chargé et analysé");
         this._initStyle()
         this._initListeners()
+        event.preventDefault();
       })
 
      
@@ -73,7 +74,7 @@ class SmoothScroll {
   
     _initListeners() {
   
-      window.addEventListener('scroll', (event) => { this._handleScroll(event) })
+      window.addEventListener('scroll', (event) => { this._handleScroll(event); event.preventDefault(); })
       window.addEventListener('resize', () => { this._handleResize() })
   
       // Listening mouseup on duration range
